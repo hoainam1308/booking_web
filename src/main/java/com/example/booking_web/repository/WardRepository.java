@@ -15,4 +15,6 @@ public interface WardRepository extends JpaRepository<Ward, Long> {
     List<Ward> findByDistrictId(Long districtId);
 
     Ward findByCode(int code);
+
+    List<Ward> findByNameContainingIgnoreCase(String name);
 }
